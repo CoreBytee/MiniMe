@@ -50,6 +50,8 @@ window.addEventListener("load", async function() {
     document.getElementById("download").setAttribute("href", "data:application/zip;base64," + Base64)
     document.getElementById("download").setAttribute("download", `MiniMe - ${UserName}.zip`)
 
+    document.getElementById("download").click()
+
 
     
     
