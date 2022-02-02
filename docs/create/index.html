@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>MiniMe!</title>
+
+        <script src="../lib/Request.js" type="module"></script>
+        <script src="../lib/jszip.min.js"></script>
+
+        <script type="text/javascript" src="dist/jszip-utils.js"></script>
+        <!--
+        Mandatory in IE 6, 7, 8 and 9.
+        -->
+        <!--[if IE]>
+        <script type="text/javascript" src="dist/jszip-utils-ie.js"></script>
+        <![endif]-->
+
+        <script src="./index.js" type="module"></script>
+        
+
+    </head>
+
+    <body>
+        Hello
+        <a id="download" href="path_to_file" download="File.zip" target="_blank">Download</a>
+    </body>
+</html>
