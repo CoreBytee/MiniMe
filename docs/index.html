@@ -7,9 +7,83 @@
 
         <title>MiniMe!</title>
 
+        <script src="./lib/Request.js" type="module"></script>
+        <script src="./lib/jszip.min.js"></script>
+        <script src="./index.js" type="module"></script>
+
+        <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="./discord.css">    
+        <link rel="stylesheet" href="./center.css">
+        
+
+        <style>
+            input[type=text], select {
+                width: 50%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                background-color: var(--background-accent);
+                color: white
+            }
+
+            input::placeholder {
+                color: var(--interactive-hover);
+            }
+        </style>
+
+        <style>
+            .placeholder {
+                width: 300;
+                height: 300;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url('https://crafatar.com/renders/body/c06f89064c8a49119c29ea1dbd1aab82?size=4');
+            }
+        </style>
+
+        <style>
+            #download {
+                background-color: var(--background-secondary);
+                color: var(--interactive-hover);
+                text-decoration: none;
+                width: 25%;
+                height: 100%;
+                line-height: 3;
+                display: inline-block;
+                border: 20px;
+                outline: none;
+            }
+
+            #download:link, #download:visited, #download:focus {
+                background: var(--background-accent);
+            }
+        </style>
+
     </head>
 
     <body>
-        Hello
+        <div class="holder center">
+            <br>
+            
+            <h1>Create your own mini me</h1>
+            <br>
+            <img src="" alt="Your player" style="width: 120px; height: 270px;" id="skin">
+            <br>
+            <br>
+
+            <input type="text" name="" autocomplete="off" id="username" placeholder="Minecraft username" maxlength="16" style="text-align: center;">
+
+            <br>
+            <br>
+
+            <a href="" id="download">Download</a>
+
+            <br>
+            <br>
+
+        </div>
     </body>
 </html>

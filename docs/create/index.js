@@ -45,8 +45,6 @@ window.addEventListener("load", async function() {
 
     var Base64 = await LoadedZip.generateAsync({type: "base64"})
 
-    //window.location = "data:application/zip;base64," + Base64;
-
     document.getElementById("download").setAttribute("href", "data:application/zip;base64," + Base64)
     document.getElementById("download").setAttribute("download", `MiniMe - ${UserName}.zip`)
 
