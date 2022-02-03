@@ -5,7 +5,6 @@ window.addEventListener("load", async function() {
     console.log("Loaded")
 
     document.getElementById("username").addEventListener("input", Change)
-    //document.getElementById("skin").src = `https://crafatar.com/renders/body/c06f89064c8a49119c29ea1dbd1aab82`
     document.getElementById("skin").setAttribute("src", `https://crafatar.com/renders/body/c06f89064c8a49119c29ea1dbd1aab82`)
 
 
@@ -27,6 +26,8 @@ async function Change() {
 
     console.log("Change")
 
+    var SetName = document.getElementById("username").value
+
     var RequestData = (await WebRequest(
         "GET",
         "https://api.mojang.com/users/profiles/minecraft/" + document.getElementById("username").value,
@@ -44,6 +45,10 @@ async function Change() {
     var UUID = UserData.id
     var UserName = UserData.name
     console.log(UUID)
+
+    if (SetName != document.getElementById("username").value) {
+        return
+    }
 
     document.getElementById("download").innerText = "Download"
     document.getElementById("download").href = "./create/?username=" + UserName
